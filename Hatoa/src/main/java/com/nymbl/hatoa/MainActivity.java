@@ -5,10 +5,13 @@ import android.hardware.Camera;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import com.nymbl.hatoa.zbarIntegration.CameraPreview;
@@ -30,6 +33,7 @@ public class MainActivity extends Activity {
 
     ImageScanner scanner;
 
+    GridView gridView;
     private boolean barcodeScanned = false;
     private boolean previewing = true;
 
@@ -41,37 +45,37 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        autoFocusHandler = new Handler();
-        mCamera = getCameraInstance();
-
-        /* Instance barcode scanner */
-        scanner = new ImageScanner();
-        scanner.setConfig(0, Config.X_DENSITY, 3);
-        scanner.setConfig(0, Config.Y_DENSITY, 3);
-
-        mPreview = new CameraPreview(this, mCamera, previewCb, autoFocusCB);
-        FrameLayout preview = (FrameLayout)findViewById(R.id.cameraPreview);
-        preview.addView(mPreview);
-
-        scanText = (TextView)findViewById(R.id.scanText);
-
-        scanButton = (Button)findViewById(R.id.ScanButton);
-
-        scanButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (barcodeScanned) {
-                    barcodeScanned = false;
-                    scanText.setText("Scanning...");
-                    mCamera.setPreviewCallback(previewCb);
-                    mCamera.startPreview();
-                    previewing = true;
-                    mCamera.autoFocus(autoFocusCB);
-                }
-            }
-        });
+//
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//
+//        autoFocusHandler = new Handler();
+//        mCamera = getCameraInstance();
+//
+//        /* Instance barcode scanner */
+//        scanner = new ImageScanner();
+//        scanner.setConfig(0, Config.X_DENSITY, 3);
+//        scanner.setConfig(0, Config.Y_DENSITY, 3);
+//
+//        mPreview = new CameraPreview(this, mCamera, previewCb, autoFocusCB);
+//        FrameLayout preview = (FrameLayout)findViewById(R.id.cameraPreview);
+//        preview.addView(mPreview);
+//
+//        scanText = (TextView)findViewById(R.id.scanText);
+//
+//        scanButton = (Button)findViewById(R.id.ScanButton);
+//
+//        scanButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                if (barcodeScanned) {
+//                    barcodeScanned = false;
+//                    scanText.setText("Scanning...");
+//                    mCamera.setPreviewCallback(previewCb);
+//                    mCamera.startPreview();
+//                    previewing = true;
+//                    mCamera.autoFocus(autoFocusCB);
+//                }
+//            }
+//        });
     }
 
     public void onPause() {

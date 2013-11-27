@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nymbl.hatoa.CardView
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#C7C7C1"
+        android:showDividers="middle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Flipper!"
+                android:id="@+id/textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="45dp" />
+         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/card_menu_item_states"
+            android:text="Like"/>
+
+    </LinearLayout>
+
+</com.nymbl.hatoa.CardView>

@@ -1,0 +1,28 @@
+<com.nymbl.hatoa.CardMenuList
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:divider="#ff1c5300"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/menulist_background"
+    android:showDividers="middle"
+    android:visibility="gone">
+
+    <com.nymbl.hatoa.TestCardMenuItem
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Test Item" />
+
+    <com.nymbl.hatoa.TestCardMenuItem
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Test Item"/>
+
+    <com.nymbl.hatoa.TestCardMenuItem
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Test Item"/>
+</com.nymbl.hatoa.CardMenuList>

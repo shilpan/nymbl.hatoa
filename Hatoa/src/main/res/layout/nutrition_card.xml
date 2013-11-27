@@ -1,0 +1,7 @@
+<com.nymbl.hatoa.Card
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hatoa="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    hatoa:frontView="@layout/nutri_main_view" />

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Card">
+        <attr name="swipe" format="boolean"/>
+        <attr name="flip" format="boolean" />
+        <attr name="dragDrop" format="boolean" />
+        <attr name="frontView" format="reference" />
+        <attr name="backView" format="reference" />
+        <attr name="menuView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CardMenuItem">
+        <attr name="android:text" />
+    </declare-styleable>
+</resources>
